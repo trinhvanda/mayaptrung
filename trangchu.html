@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MÁY ẤP TRỨNG</title>
+    <link rel="stylesheet" href="trangchu.css">
+</head>
+<body>
+    <header>
+        <img src="img/logooo.png" alt="">
+        <p>MÁY ẤP TRỨNG N11</p>
+        <nav class="navigation">
+            <a class="active" href="trangchu.html">Trang chủ</a>
+            <!-- <a href="trangchu.html">Trang chủ</a> -->
+            <a href="thanhvien.html">Thành viên</a>
+            <a href="lienhe.html">Liên hệ</a>
+            
+            <button class="nutdn">Đăng nhập</button>
+        </nav>
+    </header>
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    
+    <img src="img/image4.png" >
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    
+    <img src="img/image5.png" >
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    
+    <img src="img/image6.png" >
+    <div class="text"></div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <div class="wrapper">
+    <span class="icon-close">
+        <ion-icon name="close"></ion-icon>
+    </span>
+
+    <div class="form-login">
+        <h2>ĐĂNG NHẬP</h2>
+        <form action="#">
+            <div class="input-box">
+                <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn"><a href="quanli.html" class="nut">Đăng nhập</a></button>
+            <div class="login-register">
+                <p>Don't have an account?<a href="#" class="register-link">Register</a></p>
+            </div>
+        </form>
+    </div>
+
+    <div class="form-register">
+        <h2>ĐĂNG KÝ</h2>
+        <form action="#">
+            <div class="input-box">
+                <span class="icon"><ion-icon name="person"></ion-icon></span>
+                <input type="text" required>
+                <label>Tên tài khoản</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Agree to the terms & conditions</label>
+            
+            </div>
+            <button type="submit" class="btn"><a href="quanli.html" class="nut">Đăng ký</a></button>
+            <div class="login-register">
+                <p>Already have an account?<a href="#" class="login-link">Login</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+    
+    <script src="main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

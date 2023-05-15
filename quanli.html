@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MÁY ẤP TRỨNG</title>
+    <link rel="stylesheet" href="quanli.css">
+</head>
+<body>
+    <header>
+        <img src="img/logooo.png" alt="">
+        <p>MÁY ẤP TRỨNG N11</p>
+        <button  class="nutdn"><a href="trangchu.html" class="nut">Thoát</a></button>
+
+    </header>
+    <div class="main">
+        <div><h1>GIÁM SÁT MÁY ẤP TRỨNG</h1></div>
+        <div class="hienthi1">
+            <h1>MẤY ẤP SỐ 1</h1>
+            <div class="nhiet">
+                <div class="x">
+                    <div class="a"><span id="Nhiet1">00</span> °C </div>
+                    <div class="b">NHIỆT ĐỘ</div>
+                </div>
+                <div><img id="den1" class="den" src="img/densang.jpg" alt=""></div>
+            </div>
+            <div class="am">
+                <div class="a"><span id="Am1">00</span> %</div>
+                <div class="b">ĐỘ ẨM</div>
+            </div>
+            <div class="luong">
+                <div class="a"><span id="Soluong1">00</span> trứng</div>
+                <div class="b">SỐ LƯỢNG TRỨNG</div>
+            </div>
+            <div class="ngay">
+                <div class="a"><span id="Ngay1">00</span> ngày</div>
+                <div class="b">NGÀY ẤP</div>
+            </div>
+        </div>
+        <div class="hienthi2">
+            <h1>MẤY ẤP SỐ 2</h1>
+            <div class="nhiet">
+                <div class="x">
+                    <div class="a"><span id="Nhiet2">00</span> °C </div>
+                    <div class="b">NHIỆT ĐỘ</div>
+                </div>
+                <div><img id="den2" class="den" src="img/densang.jpg" alt=""></div>
+            </div>
+            <div class="am">
+                <div class="a"><span id="Am2">00</span> %</div>
+                <div class="b">ĐỘ ẨM</div>
+            </div>
+            <div class="luong">
+                <div class="a"><span id="Soluong2">00</span> trứng</div>
+                <div class="b">SỐ LƯỢNG TRỨNG</div>
+            </div>
+            <div class="ngay">
+                <div class="a"><span id="Ngay2">00</span> ngày</div>
+                <div class="b">NGÀY ẤP</div>
+            </div>
+        </div>
+    </div>
+    
+    
+        
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+        import { getDatabase, set, get, update, remove, ref, child, onValue} from "https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyAYozQIt2Pm_4Qt5x0deQcSEsr_YQyaLfI",
+          authDomain: "kc326nhom11.firebaseapp.com",
+          databaseURL: "https://kc326nhom11-default-rtdb.asia-southeast1.firebasedatabase.app",
+          projectId: "kc326nhom11",
+          storageBucket: "kc326nhom11.appspot.com",
+          messagingSenderId: "135811150205",
+          appId: "1:135811150205:web:47e4ef46a675e85d2d9c14"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const dtbase = getDatabase();
+
+        onValue(ref(dtbase, '/Nhiet1'), (snapshot) => {
+        var Nhietdo1 = snapshot.val();
+        document.getElementById('Nhiet1').innerHTML = Nhietdo1;
+        if (Nhietdo1 > 37) {
+        document.getElementById("den1").src = "img/dentat.jpg"
+        }
+        if (Nhietdo1 < 36) {
+        document.getElementById("den1").src = "img/densang.jpg"
+        }
+        });
+        
+        onValue(ref(dtbase, '/Am1'), (snapshot) => {
+        var Doam1 = snapshot.val();
+        document.getElementById('Am1').innerHTML = Doam1;
+
+        });
+
+        onValue(ref(dtbase, '/Soluong1'), (snapshot) => {
+        var Luong1 = snapshot.val();
+        document.getElementById('Soluong1').innerHTML = Luong1;
+        });
+        onValue(ref(dtbase, '/Ngay1'), (snapshot) => {
+        var Ngayap1 = snapshot.val();
+        document.getElementById('Ngay1').innerHTML = Ngayap1;
+        });
+
+        onValue(ref(dtbase, '/Nhiet2'), (snapshot) => {
+        var Nhietdo2 = snapshot.val();
+        document.getElementById('Nhiet2').innerHTML = Nhietdo2;
+        if (Nhietdo2 > 37) {
+        document.getElementById("den2").src = "img/dentat.jpg"
+        }
+        if (Nhietdo2 < 36) {
+        document.getElementById("den2").src = "img/densang.jpg"
+        }
+        });
+
+        onValue(ref(dtbase, '/Am2'), (snapshot) => {
+        var Doam2 = snapshot.val();
+        document.getElementById('Am2').innerHTML = Doam2;
+        });
+        onValue(ref(dtbase, '/Soluong2'), (snapshot) => {
+        var Luong2 = snapshot.val();
+        document.getElementById('Soluong2').innerHTML = Luong2;
+        });
+        onValue(ref(dtbase, '/Ngay2'), (snapshot) => {
+        var Ngayap2 = snapshot.val();
+        document.getElementById('Ngay2').innerHTML = Ngayap2;
+        });
+
+
+        </script>
+    
+</body>
+</html>

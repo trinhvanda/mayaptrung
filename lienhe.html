@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MÁY ẤP TRỨNG</title>
+    <link rel="stylesheet" href="lienhe.css">
+</head>
+<body>
+    <header>
+        <img src="img/logooo.png" alt="">
+        <p>MÁY ẤP TRỨNG N11</p>
+        <nav class="navigation">
+            <a href="trangchu.html">Trang chủ</a>
+            <a href="thanhvien.html">Thành viên</a>
+            <a class="active" href="lienhe.html">Liên hệ</a>
+            <button class="nutdn">Đăng nhập</button>
+        </nav>
+    </header>
+
+    <div id="main">
+        <div class="lienhe">
+            <h1>Thông tin liên hệ</h1>
+            <table border="0" cellpadding="50" cellspacing="0" classs="table" >
+                <tr>
+                    <th>Họ và tên</th>
+                    <th>Số điện thoại</th>
+                    <th>Email</th>
+                </tr>
+                <tr>
+                    <td>Trịnh Văn Dã</td>
+                    <td>0337362036</td>
+                    <td>dab1907110@student.ctu.edu.vn</td>
+                </tr>
+                <tr>
+                    <td>Lê Khánh Duy</td>
+                    <td>0973326630</td>
+                    <td>duyb1906994@student.ctu.edu.vn</td>
+                </tr>
+                <tr>
+                    <td>Nguyễn Gia Khôi</td>
+                    <td>0386447814</td>
+                    <td>khoib1912939@student.ctu.edu.vn</td>
+                </tr>
+                <tr>
+                    <td>Nguyễn Triệu Diệu Quyên</td>
+                    <td>0939342738</td>
+                    <td>quyenb2011757@student.ctu.edu.vn</td>
+                </tr>
+                <tr>
+                    <td>Võ Minh Triết</td>
+                    <td>0376604231</td>
+                    <td>trietb1913093@student.ctu.edu.vn</td>
+                </tr>
+            </table> 
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <span class="icon-close">
+            <ion-icon name="close"></ion-icon>
+        </span>
+
+        <div class="form-login">
+            <h2>ĐĂNG NHẬP</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn"><a href="quanli.html" class="nut">Đăng nhập</a></button>
+                
+                <div class="login-register">
+                    <p>Don't have an account?<a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-register">
+            <h2>ĐĂNG KÝ</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" required>
+                    <label>Tên tài khoản</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Agree to the terms & conditions</label>
+                
+                </div>
+                <button type="submit" class="btn"><a href="quanli.html" class="nut">Đăng ký</a></button>
+                <div class="login-register">
+                    <p>Already have an account?<a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+    
+    <script src="main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
